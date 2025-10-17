@@ -10,6 +10,7 @@ private:
     vector<Item> items;
 public:
     Menu(const string& _title) ;
-    void add_item(const Item& item) ;
+    void add_item(const Item& item);
     void display_menu() ;
+    Item search (string item_name);
 };

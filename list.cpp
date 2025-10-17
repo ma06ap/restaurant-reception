@@ -13,3 +13,15 @@ void Menu::display_menu() {
         item.display();
     }
 }
+
+Item Menu::search (string item_name){
+    while (1) {
+    for (Item item : items) {
+        if (item.get_name() == item_name) {
+            return item;
+        }
+    }
+    cout << "Item not found. Please enter a valid item name: ";
+    cin >> item_name;
+    }
+}

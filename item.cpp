@@ -93,8 +93,8 @@ void Item::change () {
 }
 
 void Item::display() {
-    cout << "Name: " << this->get_name() << endl;
-    cout << "Price: " << this->get_price() << endl; 
+    cout << "Name: " << this->get_name() << ", ";
+    cout << "Price: " << this->get_price() << ", "; 
     cout << "Type: ";
     Item_type temp = this->get_type();
     if (temp == food) cout << "Food" << endl;

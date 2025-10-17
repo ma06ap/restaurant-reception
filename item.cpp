@@ -1,4 +1,4 @@
-#include"item.h"
+#include "item.h"
 #include <iostream>
 #include <string>
 
@@ -26,14 +26,19 @@ void Item::set_type(int input) {
     type = _type;
     cout << "Type updated successfully." << endl;
 }
-Item::Item(const string& _name, float _price, Item_type _type) {
+Item::Item(string _name, float _price, int _type) {
     while (_price < 0.0f) {
         cout << "Price cannot be negative. Please enter a valid price: ";
         cin >> _price;
     }
     name = _name;
     price = _price;
-    type = _type;
+    while (_type >= 3 || _type < 0)
+    {
+        cout << "Invalid type. Please enter 0 for food, 1 for drink, or 2 for dessert: ";
+        cin >> _type;
+    }
+    type = static_cast<Item_type>(_type);
 }
 
 float Item::get_price() { return price; }

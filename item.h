@@ -1,3 +1,6 @@
+#pragma once
+
+
 #include <string>
 #include <iostream>
 
@@ -24,3 +27,4 @@ public:
     void change ();
     void display();
 }; 
+

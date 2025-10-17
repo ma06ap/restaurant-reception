@@ -1,3 +1,4 @@
+
 #include "item.h"
 #include <iostream>
 #include <string>
@@ -33,7 +34,7 @@ Item::Item(string _name, float _price, int _type) {
     }
     name = _name;
     price = _price;
-    while (_type >= 3 || _type < 0)
+    while (_type < 0 || _type > 2)
     {
         cout << "Invalid type. Please enter 0 for food, 1 for drink, or 2 for dessert: ";
         cin >> _type;
